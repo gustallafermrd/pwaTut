@@ -9,7 +9,8 @@ const assets = [
 	'/css/materialize.min.css',
 	'/img/dish.png',
 	'https://fonts.googleapis.com/icon?family=Material+Icons',
-	'https://fonts.gstatic.com/s/materialicons/v48/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2'
+	'https://fonts.gstatic.com/s/materialicons/v48/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2',
+	'/pages/fallback.html'
 ];
 
 // install service worker
@@ -47,6 +48,6 @@ self.addEventListener('fetch', evt =>{
 						return fetchRes;
 				})
 			});
-		})
+		}).catch(() => caches.match('/pages.fallback.html'))
 	);
 });
