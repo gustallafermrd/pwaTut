@@ -26,3 +26,5 @@ const renderRecipe = (data, id) => {
 
   recipes.innerHTML += html
 };
+
+// render page when deleted data from database
