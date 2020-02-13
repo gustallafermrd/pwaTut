@@ -1,4 +1,4 @@
- <html lang="en">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
   <!-- iOS support -->
   <link rel="apple-touch-icon" href="/icons/icon-96x96.png">
   <meta name="apple-mobile-web-app-status-bar" content="#aa7700">
-  <meta name="theme_color" content=""ffe1c4>
+  <meta name="theme-color" content="#ffe1c4">
 </head>
 <body class="grey lighten-4">
 
@@ -41,46 +41,7 @@
   <!-- recipes -->
   <div class="recipes container grey-text text-darken-1">
     <h6 class="center">Ninja Recipes</h6>
-    <div class="card-panel recipe white row">
-      <img src="/img/dish.png" alt="recipe thumb">
-      <div class="recipe-details">
-        <div class="recipe-title">Edame Noodles</div>
-        <div class="recipe-ingredients">Edamame Beans, Noodles, Garlic oil</div>
-      </div>
-      <div class="recipe-delete">
-        <i class="material-icons">delete_outline</i>
-      </div>
-    </div>
-    <div class="card-panel recipe white row">
-      <img src="/img/dish.png" alt="recipe thumb">
-      <div class="recipe-details">
-        <div class="recipe-title">Edame Noodles</div>
-        <div class="recipe-ingredients">Edamame Beans, Noodles, Garlic oil</div>
-      </div>
-      <div class="recipe-delete">
-        <i class="material-icons">delete_outline</i>
-      </div>
-    </div>
-    <div class="card-panel recipe white row">
-      <img src="/img/dish.png" alt="recipe thumb">
-      <div class="recipe-details">
-        <div class="recipe-title">Edame Noodles</div>
-        <div class="recipe-ingredients">Edamame Beans, Noodles, Garlic oil</div>
-      </div>
-      <div class="recipe-delete">
-        <i class="material-icons">delete_outline</i>
-      </div>
-    </div>
-    <div class="card-panel recipe white row">
-      <img src="/img/dish.png" alt="recipe thumb">
-      <div class="recipe-details">
-        <div class="recipe-title">Edame Noodles</div>
-        <div class="recipe-ingredients">Edamame Beans, Noodles, Garlic oil</div>
-      </div>
-      <div class="recipe-delete">
-        <i class="material-icons">delete_outline</i>
-      </div>
-    </div>
+    
   </div>
 
   <div class="center">
@@ -108,7 +69,28 @@
     </form>
   </div>
 
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-firestore.js"></script>
+
+	<script>
+	  // Your web app's Firebase configuration
+	  var firebaseConfig = {
+	    apiKey: "AIzaSyDT5IIP_EnB36CY1puVLhMv1jEYJiFwcT0",
+	    authDomain: "food-ninja-pwa-846eb.firebaseapp.com",
+	    databaseURL: "https://food-ninja-pwa-846eb.firebaseio.com",
+	    projectId: "food-ninja-pwa-846eb",
+	    storageBucket: "food-ninja-pwa-846eb.appspot.com",
+	    messagingSenderId: "580300725622",
+	    appId: "1:580300725622:web:09accb08349a614c372e57"
+	  };
+	  // Initialize Firebase
+	  firebase.initializeApp(firebaseConfig);
+		const db =  firebase.firestore();
+	</script>
+
   <script src="/js/app.js"></script>
+	<script src="/js/db.js"></script>
   <script src="/js/ui.js"></script>
 </body>
 </html>
